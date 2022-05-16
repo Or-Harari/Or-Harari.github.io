@@ -17,7 +17,7 @@ export class WeatherDisplayComponent implements OnInit {
   
   
   weatherForecast:Observable<{weatherForecast:WeatherDisplay[]}> ;
-  constructor(private accu:AccuWeatherService,
+  constructor(public accu:AccuWeatherService,
     private weat:WeatherPageComponent,
   private store:Store<{weatherDisp: {weatherForecast:WeatherDisplay[]} }>) {}
     

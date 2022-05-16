@@ -41,7 +41,7 @@ export class WeatherPageComponent implements OnInit {
 
     private formBuilder: FormBuilder,
     private http:HttpClient,
-    private AccuWeatherService:AccuWeatherService,
+    public AccuWeatherService:AccuWeatherService,
     private store:Store<{weatherDisp: {weatherForecast:WeatherDisplay[]} }>,
     private store1:Store<{searchLoc: {search:lastSearch[]} }>) {
       this.search = store1.select('searchLoc')
