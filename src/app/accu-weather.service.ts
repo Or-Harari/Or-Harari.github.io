@@ -104,12 +104,12 @@ export class AccuWeatherService {
     this.hasBeenSearched = false
     this.name =locationKey;
      this.http.get(
-      'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke&q=' + locationKey)
+      'https://dataservice.accuweather.com/locations/v1/cities/search?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke&q=' + locationKey)
        .subscribe(posts =>{
         this.locationKey = JSON.parse(posts[0].Key);    
         
         this.http.get(  
-          'http://dataservice.accuweather.com/currentconditions/v1/' + this.locationKey +'?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
+          'https://dataservice.accuweather.com/currentconditions/v1/' + this.locationKey +'?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
         ).subscribe(curWeather => {
         this.currWeather = JSON.parse(curWeather[0].Temperature.Metric.Value);
         this.convertToC(this.currWeather)
@@ -118,7 +118,7 @@ export class AccuWeatherService {
         })
     
       this.http.get(
-        'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'+this.locationKey+'?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
+        'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+this.locationKey+'?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
     ).subscribe(Response =>{
       console.log(Response)
     const forecastArray:object[]=[];
@@ -151,7 +151,7 @@ convertToC(f:number){
 }
 getCurrentWeatherOfTelAviv(){
   this.http.get(
-       'http://dataservice.accuweather.com/currentconditions/v1/215854?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
+       'https://dataservice.accuweather.com/currentconditions/v1/215854?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
      ).subscribe(currrWeather => {
        console.log(currrWeather[0])
      this.weatherTelaviv = JSON.parse(currrWeather[0].Temperature.Metric.Value);
@@ -192,11 +192,11 @@ autoSearch(event:any){
   addToFavorite(locationKey){
     this.name =locationKey;
      this.http.get(
-      'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke&q=' + this.name)
+      'https://dataservice.accuweather.com/locations/v1/cities/search?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke&q=' + this.name)
        .subscribe(posts =>{
         this.locationKey = JSON.parse(posts[0].Key); 
         this.http.get(
-          'http://dataservice.accuweather.com/currentconditions/v1/' + this.locationKey +'?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
+          'https://dataservice.accuweather.com/currentconditions/v1/' + this.locationKey +'?apikey=QB5lljlAw0wDn8G9ousWnGGEe7krSGke'
         ).subscribe(currrWeather => {
           console.log(currrWeather[0].Temperature)
           this.currentWeather = currrWeather[0].Temperature.Metric.Value
