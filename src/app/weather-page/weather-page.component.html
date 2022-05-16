@@ -1,0 +1,28 @@
+<body> 
+    <div ><h1>Tel-Aviv Temp: {{ AccuWeatherService.weatherTelaviv }}</h1>
+
+    </div>
+    
+    
+<form autocomplete="off" id="form"  [formGroup]="weatherSearchForm" (ngSubmit)="sendToAccuweather(weatherSearchForm.value)"> 
+<div class="container">
+    <div class="row" >
+        <div id="srchLoc"  >
+            <input class="form-control" (input) = "autoSearchSend(weatherSearchForm.value)" type="text" placeholder="Search Location"[(ngModel)] = 'searchFiels' id="weatherLocation" formControlName= "location" #bar>
+            <table *ngFor = 'let search of (search | async)'>
+                <button class="form-control" value="{{search.localName}}" type="button" (click)='autoSearch(but)' #but >{{ search.localName }}</button>
+            
+            </table>
+        </div>
+    </div>  
+</div>
+</form>
+</body>
+<div *ngIf='hasBeenSearched || AccuWeatherService.hasBeenSearched'>
+    <div>
+    <app-weather-display></app-weather-display></div>
+
+    
+
+
+        

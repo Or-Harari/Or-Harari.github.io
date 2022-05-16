@@ -1,0 +1,60 @@
+ 
+<div class="container">
+    <div class="row">
+           
+        <div class="col-lg-4" id="favo">
+          
+                <h4>City Forecast Of</h4>
+                  <p id="secp"> {{ accu.city }}</p>
+                   <table id="table">
+                        <th><button type="button" (click)='accu.addToFavorite(accu.city)' class="btn btn-success">Add To Favorite</button></th>
+                    </table>
+                 
+    
+            </div>
+<div class="col-lg-8" id="inf">
+       
+                    
+                        <div id="currwe"><h3 >Current Weather</h3></div>
+                        <div class="mainTemp">{{ accu.currWeather }}&#8451;</div>
+                        <div class="city1"><small><small>City:</small></small> {{ accu.city }}</div>
+                        <div>&nbsp;</div>
+                    </div>
+               
+
+    </div>
+     
+        
+    
+
+        
+        
+
+         
+    <div class="row" id="sec-row">
+        <div class="col-lg-2" id="tt"   *ngFor='let forecast of weatherForecast | async'>
+           
+              
+                    <div class="info" >{{ forecast.date }}
+                    <div>&nbsp;</div>
+                    <div><h3>{{ forecast.day }}</h3></div>
+                    <div class="temp">{{ forecast.maxTemp }}&#176; | {{ forecast.minTemp }}&#176;</div>
+                    <div class="city"><small><small>City:</small></small> {{ forecast.city }}</div>
+                    <div>&nbsp;</div>
+         
+    
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+                       
+ 
+    

@@ -1,0 +1,147 @@
+.weather
+{
+   
+    padding-top:2px ;
+
+    border-radius: 10px;
+    
+}
+
+.weather .current
+{
+        /* background-color: white; */
+        background-color:rgb(255, 255, 255);
+        color: black;
+        /* margin-left:0.5px ; */
+        /* text-shadow: 1px 1px black; */
+        border: 0.9px solid black;
+        box-shadow:1px 0px 2px gray
+}
+
+#tt .city
+    {
+     font-size: 30px;
+     position: relative;
+     top: 80px;
+    }
+
+    #tt .temp
+    {
+         font-size: 42px;
+         position: relative;
+         top: 60px;
+     }
+
+.mainTemp{
+            position: absolute;
+            font-size: 80px;
+            color: black;
+            justify-items: center;
+            right: 0;
+            bottom: 0;
+            margin-right: 10px;
+
+        }
+        #currwe{
+            
+            position: absolute;
+            top:0;
+            left: 0;
+            margin-left: 10px;
+        }
+        #currwe h3{
+            font-size: 50px;
+        }
+        .city1{
+            position: absolute;
+            bottom:0;
+            left: 0;
+            font-size: 40px;
+            margin-left: 10px;
+    }
+
+    #tt{
+        display: grid;
+        justify-self: center;
+        position: relative;
+        text-align: center;
+    
+        height: 350px;
+        background-color:rgb(255, 255, 255);
+        color: black;
+        /* margin-left:0.5px ; */
+        /* text-shadow: 1px 1px black; */
+        border: 0.9px solid black;
+        box-shadow:1px 0px 2px gray;
+   
+        padding-top:2px ;
+
+        border-radius: 10px;
+        margin:2px ;
+        min-width: 18%;
+        
+    
+    }   
+    #sec-row{
+        justify-content: center;
+    } 
+   
+    #inf{
+      
+position: relative;
+        height: 240px;
+        background-color:rgb(240, 239, 202);
+        color: black;
+        /* margin-left:0.5px ; */
+        /* text-shadow: 1px 1px black; */
+        border: 1px solid black;
+        border-radius: 3px;
+        margin-top:2px;
+        box-shadow:1px 0px 2px gray
+
+ }
+ .info{
+     position: relative;
+ }
+   
+    #favo{
+        position: relative;
+      display: inline-block;
+        text-align: center;
+        
+       
+        background-color: rgb(238, 204, 204);
+        border: 1px solid black;
+        border-radius: 3px;
+        margin-top:2px;
+        height: 240px;
+     }
+    #addTo{
+        font-size: 28px;
+    }
+    #table{
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+    button{
+        width: 167px;
+        text-align: center;
+    }
+    #secp{
+        font-size: 26px;
+        position: relative;
+        top: 50px;
+    }
+ 
+ 
+ 
+ 
+
+
+
+        
+
+    
