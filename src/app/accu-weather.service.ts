@@ -61,7 +61,6 @@ export class AccuWeatherService {
   setFav(data: any) {
     this.addFavorite = []
     let localData:[] = JSON.parse(localStorage.getItem('kk'))
-    console.log(localData.length)
  try{
    if(localData.length > 0){
     this.addFavorite.push(...localData);
